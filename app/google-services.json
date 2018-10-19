@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "364752289790",
+    "firebase_url": "https://demofirebasertdb.firebaseio.com",
+    "project_id": "demofirebasertdb",
+    "storage_bucket": "demofirebasertdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364752289790:android:5e02932d0fad70ea",
+        "android_client_info": {
+          "package_name": "com.emon.demofirebasertdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364752289790-fdnt4nsespn4mpusb1lhqf5eh2hdv4od.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emon.demofirebasertdb",
+            "certificate_hash": "c772925cb457745a13e19989c47aec00e9fd6e4b"
+          }
+        },
+        {
+          "client_id": "364752289790-ftrf3pgl75jei3319hg2eu8vlhes8afn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5mt2QBqAauI_yFyDsRCFltHXnvGIYCnU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364752289790-ftrf3pgl75jei3319hg2eu8vlhes8afn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
