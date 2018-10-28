@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-public class MyRecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class MyRecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener{
     TextView nameTV,emailTV;
     OnLongClickListener onLongClickListener;
 
@@ -17,12 +17,19 @@ public class MyRecyclerViewHolder extends RecyclerView.ViewHolder implements Vie
         nameTV=(TextView) itemView.findViewById(R.id.nameTV);
         emailTV=(TextView)itemView.findViewById(R.id.emailTV);
 
-        itemView.setOnClickListener(this);
+        itemView.setOnLongClickListener(this);
     }
 
     @Override
-    public void onClick(View v) {
+    public boolean onLongClick(View v) {
         onLongClickListener.onClick(v,getAdapterPosition());
+        return false;
     }
+
+//    @Override
+//    public void onClick(View v) {
+//        onLongClickListener.onClick(v,getAdapterPosition());
+//    }
+//
 
 }

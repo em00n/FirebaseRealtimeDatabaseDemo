@@ -54,6 +54,7 @@ RecyclerView recyclerView;
         //firebase
         firebaseDatabase= FirebaseDatabase.getInstance();
         databaseReference=firebaseDatabase.getReference("EMON");
+        databaseReference.keepSynced(true);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -149,7 +150,6 @@ RecyclerView recyclerView;
                 });
                 dialogg.show();
 
-
             }
         });
         alert.setNegativeButton("Delete", new DialogInterface.OnClickListener() {
@@ -171,11 +171,11 @@ RecyclerView recyclerView;
                     }
                 });
 
-
             }
         });
-
-        AlertDialog alertDialog=alert.create();
+        final AlertDialog alertDialog=alert.create();
         alertDialog.show();
+
     }
+
 }
