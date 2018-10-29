@@ -16,13 +16,12 @@ public class MyRecyclerViewHolder extends RecyclerView.ViewHolder implements Vie
         super(itemView);
         nameTV=(TextView) itemView.findViewById(R.id.nameTV);
         emailTV=(TextView)itemView.findViewById(R.id.emailTV);
-
         itemView.setOnLongClickListener(this);
     }
 
     @Override
     public boolean onLongClick(View v) {
-        onLongClickListener.onClick(v,getAdapterPosition());
+        onLongClickListener.onLongClick(v,getAdapterPosition());
         return false;
     }
 

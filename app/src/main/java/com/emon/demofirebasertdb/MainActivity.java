@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 Button addBTN,updateBTN;
 RecyclerView recyclerView;
 
-
 //firebase
 
     FirebaseDatabase firebaseDatabase;
@@ -91,10 +90,15 @@ RecyclerView recyclerView;
                         holder.emailTV.setText(model.getEmail());
                         holder.setOnLongClickListener(new OnLongClickListener() {
                             @Override
-                            public void onClick(View view, int position) {
+                            public void onLongClick(View view, int position) {
                                 selectedkey=getSnapshots().getSnapshot(position).getKey();
-                               updateDelet(position);
+                                updateDelet(position);
                             }
+
+//                            @Override
+//                            public void onClick(View view, int position) {
+//
+//                            }
                         });
                     }
 
