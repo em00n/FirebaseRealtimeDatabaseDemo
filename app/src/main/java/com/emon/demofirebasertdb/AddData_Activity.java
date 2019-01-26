@@ -57,6 +57,7 @@ public class AddData_Activity extends AppCompatActivity {
                 startActivity(new Intent(AddData_Activity.this,MainActivity.class));
                 Toast.makeText(AddData_Activity.this, "add", Toast.LENGTH_SHORT).show();
                 clear();
+                finish();
 
             }
         });
@@ -65,7 +66,7 @@ public class AddData_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(AddData_Activity.this,MainActivity.class));
-
+                finish();
             }
         });
 

@@ -138,6 +138,11 @@ RecyclerView recyclerView;
 
     }
 
+    public void addbutton(View view) {
+        Intent intent=new Intent(MainActivity.this,AddData_Activity.class);
+        startActivity(intent);
+    }
+
 
     //update and delete
 //    public void updateDelet(int view) {
