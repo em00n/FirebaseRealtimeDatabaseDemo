@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,10 +23,14 @@ import com.google.firebase.database.ValueEventListener;
 public class AddData_Activity extends AppCompatActivity {
     EditText nameET,emailET;
     Button addBTN,showBTN;
-
+    String useruid;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    private FirebaseAuth mAuth;
+    private DatabaseReference mDatabaseUsers;
+    private FirebaseUser mCurrentUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +44,11 @@ public class AddData_Activity extends AppCompatActivity {
 
         firebaseDatabase= FirebaseDatabase.getInstance();
         databaseReference=firebaseDatabase.getReference("EMON");
+
+        mAuth = FirebaseAuth.getInstance();
+        mCurrentUser = mAuth.getCurrentUser();
+        //mDatabaseUsers = FirebaseDatabase.getInstance().getReference().child("Users").child(mCurrentUser.getUid());
+        useruid=mAuth.getCurrentUser().getUid();
 
         addBTN.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,10 +75,10 @@ public class AddData_Activity extends AppCompatActivity {
     //add data to database
     private void addData() {
 
-        String name="Name: "+nameET.getText().toString();
-        String email="Email: "+emailET.getText().toString();
+        String name=nameET.getText().toString();
+        String email=emailET.getText().toString();
 
-        Post post=new Post(name,email);
+        Post post=new Post(name,email,useruid);
         databaseReference.push()  //use this method to creat unik id
                 .setValue(post);
        // adapter.notifyDataSetChanged();

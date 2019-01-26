@@ -1,14 +1,15 @@
 package com.emon.demofirebasertdb;
 
 public class Post {
-   private String name,email;
+   private String name,email,uid;
 
     public Post() {
     }
 
-    public Post(String name, String email) {
+    public Post(String name, String email, String uid) {
         this.name = name;
         this.email = email;
+        this.uid=uid;
     }
 
     public String getName() {
@@ -25,5 +26,13 @@ public class Post {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 }
