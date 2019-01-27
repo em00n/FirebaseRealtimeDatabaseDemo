@@ -1,35 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="18dp"
-    android:paddingRight="18dp"
-    android:paddingTop="7dp"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="7dp">
+    <android.support.v7.widget.CardView
+        android:id="@+id/c1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:layout_marginBottom="3dp"
+        android:elevation="7dp"
+        >
+        <TextView
+            android:id="@+id/nameTV"
+            android:text="Title : "
+            android:textSize="27dp"
+            android:textColor="#000"
+            android:background="@drawable/postbody"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/c2"
+        android:layout_below="@+id/c1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        app:cardCornerRadius="15dp"
+        android:elevation="7dp"
+        >
+        <TextView
+            android:id="@+id/emailTV"
+            android:text="Description : "
+            android:background="@drawable/postbody"
+            android:textSize="25dp"
+            android:textColor="#000"
+            android:textStyle="italic"
+            android:padding="5dp"
+            android:layout_marginBottom="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
 
-    <TextView
-        android:id="@+id/nameTV"
-        android:text="name : "
-        android:textSize="25dp"
-        android:textColor="#000"
-        android:textStyle="italic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/emailTV"
-        android:text="email : "
-        android:textSize="25dp"
-        android:textColor="#000"
-        android:textStyle="italic"
-        android:layout_marginBottom="7dp"
-        android:layout_below="@+id/nameTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+
     <View
         android:layout_width="match_parent"
-        android:layout_below="@+id/emailTV"
-        android:layout_height="1dp"
-        android:background="#999999"
+        android:layout_below="@+id/c2"
+        android:layout_height="1.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#a9a6a6"
         />
 
 </RelativeLayout>

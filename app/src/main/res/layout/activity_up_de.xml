@@ -20,9 +20,8 @@
         android:background="@android:color/transparent"
         android:drawablePadding="12dp"
         android:padding="8dp"
-        android:hint="Name"
+        android:hint="Title"
         android:textColorHint="#fff"
-        android:maxLines="1"
         android:gravity="center"
         android:layout_marginTop="70dp"/>
     <View
@@ -33,14 +32,13 @@
         android:id="@+id/emailET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:ems="10"
         android:drawablePadding="12dp"
         android:padding="8dp"
-        android:hint="Email"
+        android:hint="Description"
         android:gravity="center"
         android:textColorHint="#fff"
-        android:maxLines="1"
         android:background="@android:color/transparent"
         android:layout_marginTop="4dp"/>
     <View
@@ -65,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_login"
-        android:text="Delet"
+        android:text="Delete"
         style="@style/Base.TextAppearance.AppCompat.Body1"
         android:textColor="#f16f7d"
         android:textAllCaps="false"

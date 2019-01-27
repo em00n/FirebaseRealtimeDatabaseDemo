@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -101,8 +103,8 @@ RecyclerView recyclerView;
         adapter= new FirebaseRecyclerAdapter<Post, MyRecyclerViewHolder>(option) {
                     @Override
                     protected void onBindViewHolder(@NonNull MyRecyclerViewHolder holder, int position, @NonNull final Post model) {
-                        holder.nameTV.setText("Name : "+model.getName());
-                        holder.emailTV.setText("Email : "+model.getEmail());
+                        holder.nameTV.setText(model.getName());
+                        holder.emailTV.setText(model.getEmail());
                         holder.setOnLongClickListener(new OnLongClickListener() {
                             @Override
                             public void onLongClick(View view, int position) {
@@ -213,5 +215,26 @@ RecyclerView recyclerView;
 //        alertDialog.show();
 //
 //    }
+    //menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+        return true;
+    }
+    //menu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu1:
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
 }

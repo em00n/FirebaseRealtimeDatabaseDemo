@@ -21,9 +21,8 @@
         android:background="@android:color/transparent"
         android:drawablePadding="12dp"
         android:padding="8dp"
-        android:hint="Name"
+        android:hint="Title"
         android:textColorHint="#fff"
-        android:maxLines="1"
         android:gravity="center"
         android:layout_marginTop="70dp"/>
     <View
@@ -38,7 +37,7 @@
         android:ems="10"
         android:drawablePadding="12dp"
         android:padding="8dp"
-        android:hint="Email"
+        android:hint="Description"
         android:gravity="center"
         android:textColorHint="#fff"
         android:maxLines="1"
